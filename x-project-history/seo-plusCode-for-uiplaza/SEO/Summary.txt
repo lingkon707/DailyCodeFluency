@@ -1,0 +1,17 @@
+✅ Summary
+
+sitemap.xml → dynamic route handler in app/sitemap.xml/route.ts.
+
+robots.txt → static file in public/robots.txt.
+
+Deploy → check both URLs:
+
+https://uiplaza.vercel.app/sitemap.xml
+
+https://uiplaza.vercel.app/robots.txt
+
+
+before deploy :
+http://localhost:3000/robots.txt
+http://localhost:3000/sitemap.xml
+

@@ -1,0 +1,63 @@
+1️⃣ sitemap.xml
+
+Create a new file:
+uiplaza/app/sitemap.xml.ts
+
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  const pages = [
+    { url: "/", priority: 1.0 },
+    // Add other pages here if you have more, e.g.,
+    // { url: "/about", priority: 0.8 },
+  ];
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${pages
+    .map(
+      (page) => `
+  <url>
+    <loc>https://uiplaza.vercel.app${page.url}</loc>
+    <priority>${page.priority}</priority>
+  </url>`
+    )
+    .join("")}
+</urlset>`;
+
+  return new NextResponse(sitemap, {
+    headers: {
+      "Content-Type": "application/xml",
+    },
+  });
+}
+
+
+✅ This will generate https://uiplaza.vercel.app/sitemap.xml dynamically.
+
+2️⃣ robots.txt
+
+Create a new file in public/robots.txt:
+
+User-agent: *
+Allow: /
+Sitemap: https://uiplaza.vercel.app/sitemap.xml
+
+
+✅ This tells Google to crawl all pages and points it to your sitemap.
+
+3️⃣ Next Steps After Adding These Files
+
+Deploy to Vercel.
+
+Open in browser:
+
+https://uiplaza.vercel.app/sitemap.xml → should show XML sitemap
+
+https://uiplaza.vercel.app/robots.txt → should show robots.txt
+
+Go to Google Search Console
+
+Add your domain if not added.
+
+Submit https://uiplaza.vercel.app/sitemap.xml to request indexing.

@@ -1,0 +1,23 @@
+layout.tsx metadata
+page.tsx metadata
+
+*** sitemap.xml.ts
+uiplaza/app/sitemap.xml.ts
+
+** robots.txt
+public/robots.txt
+
+User-agent: *
+Allow: /
+Sitemap: https://uiplaza.vercel.app/sitemap.xml
+
+
+public/og-image.png
+
+Create a sitemap.xml and robots.txt so Google can fully index your pages.
+Ensure you have an og-image.png (1200x630) in your public/ folder for social previews.
+
+
+
+
+************ check :

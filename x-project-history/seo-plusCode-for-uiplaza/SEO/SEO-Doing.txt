@@ -1,0 +1,24 @@
+create or modify robots.txt
+
+User-agent: *
+Allow: /
+Sitemap: https://uiplaza.vercel.app/sitemap.xml
+
+__________________________
+
+✅ STEP 2: Add meta tags in your <Head>
+Edit your index.tsx or _app.tsx or custom _document.tsx.
+
+<meta name="robots" content="noindex" />
+
+// fix
+<Head>
+  <title>UI Plaza - Free UI Components & Templates</title>
+  <meta name="description" content="Free, modern UI components and templates for developers and designers." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://uiplaza.vercel.app/" />
+</Head>
+
+__________________________
+
+✅ STEP 3: Create Sitemap
